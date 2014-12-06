@@ -1,1 +1,25 @@
-<p>This is the partial for view 1.</p>
+<form name ="form" novalidate  >
+    <div  id="container" ng-Controller="View1Ctrl">
+        <div class="row times">
+            <!--
+            <div class="col-xs-4 text-center" ng-repeat="user in users">
+            -->
+                <h2>{{ users.username }}</h2>
+                <div class="col-xs-4 text-center" ng-repeat="day in users.days">
+                    <h3>Date: {{day.date}}<h3></h3>
+                    <div>Breakfast: <textarea rows="10" cols="50" ng-model="day.breakfast"></textarea></div>
+                        <div>Morning Snack: <input type="text" ng-model="day.morningSnack"></div>
+                    <div>Lunch: <textarea rows="10" cols="50" ng-model="day.lunch"></textarea></div>
+                    <div>Dinner: <textarea rows="10" cols="50" type="text" ng-model="day.dinner"></textarea></div>
+                </div>
+            <!--
+            </div>
+            -->
+        </div>
+
+        <input type="submit" ng-click="debug()" value="Debug">
+
+        <input type="submit" ng-click="reset()" value="Reset">
+
+    </div>
+</form>
