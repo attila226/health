@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute', 'firebase'])
+angular.module('myApp.view1', ['ngRoute', 'firebase', 'ui.bootstrap',])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -15,8 +15,6 @@ angular.module('myApp.view1', ['ngRoute', 'firebase'])
 
     // sync as object
     var syncObject = fb.$asObject();
-
-        $scope.foo = 'blah';
 
     // three way data binding
     syncObject.$bindTo($scope, 'users');

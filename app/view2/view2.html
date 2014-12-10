@@ -1,5 +1,32 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+
+    <table st-table="rowCollection" class="table table-striped">
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Morning</th>
+        <th>Breakfast</th>
+        <th>Lunch</th>
+        <th>Afternoon</th>
+        <th>Dinner</th>
+        <th>Night</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-click="edit($index)" ng-repeat="row in rowCollection">
+        <td>{{row.Vitamin}}</td>
+        <td>{{row.Morning}}</td>
+        <td>{{row.Breakfast}}</td>
+        <td>{{row.Lunch}}</td>
+        <td>{{row.Afternoon}}</td>
+        <td>{{row.Dinner}}</td>
+        <td>{{row.Night}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
