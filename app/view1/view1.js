@@ -10,6 +10,7 @@ angular.module('myApp.view1', ['ngRoute', 'firebase', 'ui.bootstrap',])
 }])
 
 .controller('View1Ctrl', ['$scope', '$firebase', function($scope, $firebase) {
+    //TODO: Modify to get a single user from an array of users
     var ref = new Firebase("https://vivid-fire-4038.firebaseio.com/users");
     var fb = $firebase(ref);
 
